@@ -1,9 +1,12 @@
 using System;
+using LegacyRenewalApp.Interfaces;
 
 namespace LegacyRenewalApp
 {
     public class SubscriptionRenewalService
     {
+        private readonly ICustomerRepository _customerRepository;
+        
         public RenewalInvoice CreateRenewalInvoice(
             int customerId,
             string planCode,
